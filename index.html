@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="TAPAS: a dataset for Multi agent task and motion planning.">
+  <meta name="keywords" content="TAPAS, TAMP">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> 🥘🍤🍴🧀 TAPAS: A Dataset for Task Allocation and Planning for Multi Agent Systems</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/bulma-carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="./static/css/bulma-slider.min.css"> -->
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- <script src="./static/js/bulma-carousel.min.js"></script> -->
+  <!-- <script src="./static/js/bulma-slider.min.js"></script> -->
+  <!-- <script src="./static/js/index.js"></script> -->
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">TAPAS: A Dataset for Task Assignment and Planning for Multi Agent Systems</h1>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Washington,</span>
+            <span class="author-block"><sup>2</sup>Google Research</span>
+          </div> -->
+
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!--<span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!--<span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>-->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="anonymous"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                  </span>
+                  <span>Multi Agent TAMP Solver</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="anonymous"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                  </span>
+                  <span>Scene Generator</span>
+                  </a>
+              </span>
+              <!-- Policy Link. -->
+              <span class="link-block">
+                <a href="anonymous"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Policy Learning Code</span>
+                  </a>
+                </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="anonymous"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-database"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+            </div>
+
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+      <div style="width: 100%; justify-content: center; align-items: center; margin: auto; text-align: center;">
+        <img src="./static/videos/example.gif" style="width:24.5%;" />
+        <img src="./static/videos/example_mixed.gif" style="width:24.5%;" />
+        <img src="./static/videos/example_shelf.gif" style="width:24.5%;" />
+        <img src="./static/videos/example_shelf.gif" style="width:24.5%;" />
+
+        <img src="./static/videos/example.gif" style="width:24.5%;" />
+        <img src="./static/videos/example_mixed.gif" style="width:24.5%;" />
+        <img src="./static/videos/example_shelf.gif" style="width:24.5%;" />
+        <img src="./static/videos/example_shelf.gif" style="width:24.5%;" />
+      </div>
+
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <h2 class="subtitle has-text-centered">
+        TAPAS is a dataset containing asynchronous multi agent task and motion plans for various randomly sampled environments.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Obtaining real world data for robotics tasks is harder than for other modalities such as vision and text.
+            The data that is currently available for robot learning is mostly set in static scenes, and deal with a single robot only.
+            Dealing with multiple robots comes with additional difficulties compared to single robot settings: the motion planning for multiple agents needs to take into account the movement of the other robots, and task planning needs to consider which robot a task is assigned to in addition to when a task should be done.
+          </p>
+          <p>
+
+            In this work, we present TAPAS, a simulated dataset containing task and motion plans for multiple robots acting asynchronously in the same workspace and modifying the same environment.
+            We consider prehensile manipulation in this dataset, and focus on various pick and place tasks.
+            We demonstrate that training using this data for predicting makespan of a task sequence enables speeding up finding low makespan sequences by ranking sequences before computing the full motion plan.
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Dataset. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TAPAS Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            The TAPAS dataset consists of [xx] task and motion plans on [xx] different scenarios containing up to 4 robot arms.
+            The goal in all the scenes is to move the objects to their corresponding goals using (possible collaborative) pick and place.
+          </p>
+        </div>          
+
+        <h2 class="title is-4">Scenarios</h2>
+        <div class="content has-text-justified">
+          <p>
+            We currently have 4 base scenes: up to 4 arms with random base orientation and pose, 2 arms on a husky, a conveyor-like setting with 4 arms, and a setting with a shelf and 2 arms (all illustrated above).
+          </p>
+        </div>
+
+        <h2 class="title is-6">Randomization</h2>
+        <div class="content has-text-justified">
+          <p>
+            We randomize the size of the objects and the start and the goal pose of the objects differently for each scene:
+            <ul>
+              <li>Husky: For the husky, we sample start positions on the left, and goal positions on the right of the robot.</li>
+              <li>Conveyor: For the conveyor setting, we are inspired by sorting of objects, leading to all start positions being in the middle, and all goal poses being on the outside tables.</li>
+              <li>Shelf: For the shelf scenario, we sample the start poses in the shelf, and the goal poses on the table.</li>
+              <li>Random: We randomize the position uniformly on the table while making sure that they do not collide with each other in the home-pose. The orientation is sampled uniformly from 0 - 360 deg. The objects are similarly sampled uniformly on the table.</li>
+            </ul>
+            In all settings, we ensure that the objects are in reach of at least one of the robots.
+          </p>
+        </div>
+
+        <h2 class="title is-4">Contents</h2>
+        <div class="content has-text-justified">
+          <p>
+            For each scene, we generate (multiple) possible task sequences for the robots, and generate full motion plans from the sequence using our multi agent task and motion planner (described in the paper).
+            Each task and motion plan contains:
+            <ul>
+              <li>The <i>trajectory</i> for each robot, with each step containing the joint pose of the robot, the end effector pose, and the symboic state.</li>
+              <li>The <i>plan</i>, with start and end times of an action for each robot.</li>
+              <li>The <i>sequence</i> from which the plan was generated.</li>
+              <li>A <i>scene</i> file, describing all the objects in the scene.</li>
+              <li>A <i>metadata</i> file, with the makespan of the plan, and the number of robots, and objects in the scene.</li>  
+            </ul>
+          </p>
+        </div>
+
+
+        <!--
+        <h2 class="title is-4">Getting Started</h2>
+        <div class="content has-text-justified">
+          <p>
+            ...
+          </p>
+
+        </div> -->
+      </div>
+    </div>
+    <!--/ Dataset. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Dataset. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+          <p>
+            We use the dataset to accelerate search for a good task plan. We do this by learning to predict makespan of a candidate sequences using the dataset.
+            We then use this policy to rank candidate sequences, and compute the full plans in order of the ranking.
+          </p>
+        </div>
+
+        <!-- <h2 class="title is-4">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            ...
+          </p>
+        </div> -->
+      </div>
+    </div>
+    <!--/ Dataset. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{authors,
+  author    = {Anonymous},
+  title     = {TAPAS: A Dataset for Task Assignment and Planning for Multi Agent Systems},
+  journal   = {RSS: Workshop on Data Generation for Robotics},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      The website (<a href="TODO">source code</a>) design was adapted from <a href="https://nerfies.github.io" class="external-link"><span
+        class="dnerf">Nerfies</span></a>.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
