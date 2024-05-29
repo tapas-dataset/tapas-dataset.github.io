@@ -222,6 +222,12 @@
         </div>          
 
         <h2 class="title is-4">Scenarios</h2>
+        <div style="width: 100%; justify-content: center; align-items: center; margin: auto; text-align: center;">
+          <img src="./static/images/randomized_robots.png" style="width:24.5%; height: 170px; object-fit: cover; object-position: bottom ;" />
+          <img src="./static/images/conveyor.png" style="width:24.5%; height: 170px; object-fit: cover; object-position: bottom ;" />
+          <img src="./static/images/shelf.png" style="width:24.5%; height: 170px; object-fit: cover; object-position: bottom ;" />
+          <img src="./static/images/husky.png" style="width:24.5%; height: 170px; object-fit: cover; object-position: bottom ;" />
+        </div>
         <div class="content has-text-justified">
           <p>
             We currently have 4 base scenes: up to 4 arms with random base orientation and pose, 2 arms on a husky, a conveyor-like setting with 4 arms, and a setting with a shelf and 2 arms (all illustrated above).
@@ -233,7 +239,7 @@
           <p>
             We randomize the size of the objects and the start and the goal pose of the objects differently for each scene:
             <ul>
-              <li>Husky: For the husky, we sample start positions on the left, and goal positions on the right of the robot.</li>
+              <li>Husky: For the husky, we sample start positions and goal positions randomly.</li>
               <li>Conveyor: For the conveyor setting, we are inspired by sorting of objects, leading to all start positions being in the middle, and all goal poses being on the outside tables.</li>
               <li>Shelf: For the shelf scenario, we sample the start poses in the shelf, and the goal poses on the table.</li>
               <li>Random: We randomize the position uniformly on the table while making sure that they do not collide with each other in the home-pose. The orientation is sampled uniformly from 0 - 360 deg. The objects are similarly sampled uniformly on the table.</li>
@@ -284,14 +290,29 @@
             We use the dataset to accelerate search for a good task plan. We do this by learning to predict makespan of a candidate sequences using the dataset.
             We then use this policy to rank candidate sequences, and compute the full plans in order of the ranking.
           </p>
+
+          <p>
+            We train a transformer architecture to predict the makespan for a given sequence and scene.
+          </p>
         </div>
 
-        <!-- <h2 class="title is-4">Results</h2>
+        <h2 class="title is-4">Results</h2>
         <div class="content has-text-justified">
           <p>
-            ...
+            Below, we show the resulting makespan for a scenario over time for the policy using the predicted makespan (in green) and the baseline of a random search (blue).
           </p>
-        </div> -->
+
+          <div style="width: 100%; display: flex; justify-content: space-between; margin: auto; text-align: center;">
+            <figure style="width: 49%;">
+                <img src="./static/images/r_04_obj_3.png" style="width: 100%;" alt="Description of first image">
+                <figcaption>Best found makespan at a given computation time for a scenario with 4 robots and 3 objects.</figcaption>
+            </figure>
+            <figure style="width: 49%; margin-top: 0em;">
+                <img src="./static/images/r_03_obj_4.png" style="width: 100%;" alt="Description of second image">
+                <figcaption>Best found makespan at a given computation time for a scenario with 3 robots and 4 objects.</figcaption>
+            </figure>
+        </div>
+        </div>
       </div>
     </div>
     <!--/ Dataset. -->
