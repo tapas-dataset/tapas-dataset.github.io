@@ -36,31 +36,18 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">TAPAS: A Dataset for Task Assignment and Planning for Multi Agent Systems</h1>
-          <!-- <div class="is-size-5 publication-authors">
+          <!--<div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="">Author 1</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="">Author 2</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="">Author 3</a><sup>2</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block">Anonymous University</span>
           </div> -->
 
           
@@ -102,7 +89,7 @@
                   <span class="icon">
                       <i class="fab fa-github" aria-hidden="true"></i>
                   </span>
-                  <span>Multi Agent TAMP Solver</span>
+                  <span><s>Multi Agent TAMP Solver*</s></span>
                   </a>
               </span>
               <span class="link-block">
@@ -111,7 +98,7 @@
                   <span class="icon">
                       <i class="fab fa-github" aria-hidden="true"></i>
                   </span>
-                  <span>Scene Generator</span>
+                  <span><s>Scene Generator*</s></span>
                   </a>
               </span>
               <!-- Policy Link. -->
@@ -121,20 +108,23 @@
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Policy Learning Code</span>
+                  <span><s>Policy Learning Code*</s></span>
                   </a>
                 </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="anonymous"
+                <a href="https://drive.google.com/file/d/1pJ4OCmKRkNhi5aakSPPyR2e-W3bRUFHh/view?usp=sharing"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-database"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Data**</span>
                   </a>
               </span>
             </div>
+
+            <div>*Code will be available after deanonymization.</div>
+            <div>**Currently ~10% of the dataset. Full dataset will be available after deanonymization.</div>
 
           </div> 
         </div>
@@ -148,21 +138,33 @@
     <div class="hero-body">
 
       <div style="width: 100%; justify-content: center; align-items: center; margin: auto; text-align: center;">
-        <img src="./static/videos/example.gif" style="width:24.5%;" />
-        <img src="./static/videos/example_mixed.gif" style="width:24.5%;" />
-        <img src="./static/videos/example_shelf.gif" style="width:24.5%;" />
-        <img src="./static/videos/example_shelf.gif" style="width:24.5%;" />
+        <video id="teaser" autoplay muted loop playsinline width="24.5%">
+          <source src="./static/videos/conveyor_4_obj.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline width="24.5%">
+          <source src="./static/videos/conveyor_3_obj_num_2.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline width="24.5%">
+          <source src="./static/videos/random_2_obj.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline width="24.5%">
+          <source src="./static/videos/random_4_objs.mp4" type="video/mp4">
+        </video>
 
-        <img src="./static/videos/example.gif" style="width:24.5%;" />
-        <img src="./static/videos/example_mixed.gif" style="width:24.5%;" />
-        <img src="./static/videos/example_shelf.gif" style="width:24.5%;" />
-        <img src="./static/videos/example_shelf.gif" style="width:24.5%;" />
+        <video id="teaser" autoplay muted loop playsinline width="24.5%">
+          <source src="./static/videos/shelf_2_obj.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline width="24.5%">
+          <source src="./static/videos/shelf_4_obj.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline width="24.5%">
+          <source src="./static/videos/husky_1_obj.mp4" type="video/mp4">
+        </video>
+        <video id="teaser" autoplay muted loop playsinline width="24.5%">
+          <source src="./static/videos/husky_3_obj.mp4" type="video/mp4">
+        </video>
       </div>
 
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video> -->
       <h2 class="subtitle has-text-centered">
         TAPAS is a dataset containing asynchronous multi agent task and motion plans for various randomly sampled environments.
       </h2>
@@ -183,7 +185,6 @@
             Dealing with multiple robots comes with additional difficulties compared to single robot settings: the motion planning for multiple agents needs to take into account the movement of the other robots, and task planning needs to consider which robot a task is assigned to in addition to when a task should be done.
           </p>
           <p>
-
             In this work, we present TAPAS, a simulated dataset containing task and motion plans for multiple robots acting asynchronously in the same workspace and modifying the same environment.
             We consider prehensile manipulation in this dataset, and focus on various pick and place tasks.
             We demonstrate that training using this data for predicting makespan of a task sequence enables speeding up finding low makespan sequences by ranking sequences before computing the full motion plan.
@@ -216,7 +217,7 @@
         <h2 class="title is-3">TAPAS Dataset</h2>
         <div class="content has-text-justified">
           <p>
-            The TAPAS dataset consists of [xx] task and motion plans on [xx] different scenarios containing up to 4 robot arms.
+            The TAPAS dataset consists of 204k task and motion plans on 7'000 different randomized scenarios containing up to 4 robot arms.
             The goal in all the scenes is to move the objects to their corresponding goals using (possible collaborative) pick and place.
           </p>
         </div>          
@@ -224,13 +225,13 @@
         <h2 class="title is-4">Scenarios</h2>
         <div style="width: 100%; justify-content: center; align-items: center; margin: auto; text-align: center;">
           <img src="./static/images/randomized_robots.png" style="width:24.5%; height: 170px; object-fit: cover; object-position: bottom ;" />
+          <img src="./static/images/husky.png" style="width:24.5%; height: 170px; object-fit: cover; object-position: bottom ;" />
           <img src="./static/images/conveyor.png" style="width:24.5%; height: 170px; object-fit: cover; object-position: bottom ;" />
           <img src="./static/images/shelf.png" style="width:24.5%; height: 170px; object-fit: cover; object-position: bottom ;" />
-          <img src="./static/images/husky.png" style="width:24.5%; height: 170px; object-fit: cover; object-position: bottom ;" />
         </div>
         <div class="content has-text-justified">
           <p>
-            We currently have 4 base scenes: up to 4 arms with random base orientation and pose, 2 arms on a husky, a conveyor-like setting with 4 arms, and a setting with a shelf and 2 arms (all illustrated above).
+            We currently have 4 base scenes (from left to right, illustrated above): <i>random</i>, with up to 4 arms with random base orientation and pose, <i>husky</i>, with two arms on a husky base, <i>conveyor</i>, a conveyor-like setting with 4 arms where objects have to be moved from the middle to the outside, and <i>shelf</i> a setting with a shelf and 2 arms.
           </p>
         </div>
 
@@ -239,10 +240,10 @@
           <p>
             We randomize the size of the objects and the start and the goal pose of the objects differently for each scene:
             <ul>
+              <li>Random: We randomize the position uniformly on the table while making sure that they do not collide with each other in the home-pose. The orientation is sampled uniformly from 0 - 360 deg. The objects are similarly sampled uniformly on the table.</li>
               <li>Husky: For the husky, we sample start positions and goal positions randomly.</li>
               <li>Conveyor: For the conveyor setting, we are inspired by sorting of objects, leading to all start positions being in the middle, and all goal poses being on the outside tables.</li>
               <li>Shelf: For the shelf scenario, we sample the start poses in the shelf, and the goal poses on the table.</li>
-              <li>Random: We randomize the position uniformly on the table while making sure that they do not collide with each other in the home-pose. The orientation is sampled uniformly from 0 - 360 deg. The objects are similarly sampled uniformly on the table.</li>
             </ul>
             In all settings, we ensure that the objects are in reach of at least one of the robots.
           </p>
@@ -299,7 +300,7 @@
         <h2 class="title is-4">Results</h2>
         <div class="content has-text-justified">
           <p>
-            Below, we show the resulting makespan for a scenario over time for the policy using the predicted makespan (in green) and the baseline of a random search (blue).
+            Below, we show the resulting makespan for a scenario over time for the policy using the <span style="color:#2ca02c;">predicted makespan (in green)</span> and the baseline of a <span style="color:#1f77b4;">random search (blue)</span>.
           </p>
 
           <div style="width: 100%; display: flex; justify-content: space-between; margin: auto; text-align: center;">
@@ -326,7 +327,6 @@
     <pre><code>@article{authors,
   author    = {Anonymous},
   title     = {TAPAS: A Dataset for Task Assignment and Planning for Multi Agent Systems},
-  journal   = {RSS: Workshop on Data Generation for Robotics},
   year      = {2024},
 }</code></pre>
   </div>
@@ -335,7 +335,7 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      The website (<a href="TODO">source code</a>) design was adapted from <a href="https://nerfies.github.io" class="external-link"><span
+      The website (<a href="https://github.com/tapas-dataset/tapas-dataset.github.io">source code</a>) design was adapted from <a href="https://nerfies.github.io" class="external-link"><span
         class="dnerf">Nerfies</span></a>.
     </div>
   </div>
