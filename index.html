@@ -181,8 +181,8 @@
         <div class="content has-text-justified">
           <p>
             Obtaining real world data for robotics tasks is harder than for other modalities such as vision and text.
-            The data that is currently available for robot learning is mostly set in static scenes, and deal with a single robot only.
-            Dealing with multiple robots comes with additional difficulties compared to single robot settings: the motion planning for multiple agents needs to take into account the movement of the other robots, and task planning needs to consider which robot a task is assigned to in addition to when a task should be done.
+            The data that is currently available for robot learning is mostly set in static scenes, and deals with a single robot only.
+            Dealing with multiple robots comes with additional difficulties compared to single robot settings: the motion planning for multiple agents needs to take into account the movement of the other robots, and task planning needs to consider to which robot a task is assigned to, in addition to when a task should be done.
           </p>
           <p>
             In this work, we present TAPAS, a simulated dataset containing task and motion plans for multiple robots acting asynchronously in the same workspace and modifying the same environment.
@@ -255,7 +255,7 @@
             For each scene, we generate (multiple) possible task sequences for the robots, and generate full motion plans from the sequence using our multi agent task and motion planner (described in the paper).
             Each task and motion plan contains:
             <ul>
-              <li>The <i>trajectory</i> for each robot, with each step containing the joint pose of the robot, the end effector pose, and the symboic state.</li>
+              <li>The <i>trajectory</i> for each robot, with each step containing the joint pose of the robot, the end effector pose, and the symbolic state.</li>
               <li>The <i>plan</i>, with start and end times of an action for each robot.</li>
               <li>The <i>sequence</i> from which the plan was generated.</li>
               <li>A <i>scene</i> file, describing all the objects in the scene.</li>
