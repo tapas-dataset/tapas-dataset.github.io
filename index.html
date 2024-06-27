@@ -36,33 +36,24 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">TAPAS: A Dataset for Task Assignment and Planning for Multi Agent Systems</h1>
-          <!--<div class="is-size-5 publication-authors">
+          <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Author 1</a><sup>1</sup>,</span>
+              Miguel Zamora,</span>
             <span class="author-block">
-              <a href="">Author 2</a><sup>2</sup>,</span>
+              <a href="https://vhartmann.com/">Valentin N. Hartmann</a>,</span>
             <span class="author-block">
-              <a href="">Author 3</a><sup>2</sup>,
+              <a href="https://crl.ethz.ch/people/coros/index.html">Stelian Coros</a>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Anonymous University</span>
-          </div> -->
+            <span class="author-block">Computational Robotics Lab, Department of Computer Science, ETH Zurich</span>
+          </div>
 
           
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <!--<span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -71,25 +62,16 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
-              <!-- Video Link. -->
-              <!--<span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>-->
+              </span>
+              
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="anonymous"
+                <a href="https://github.com/vhartman/24-data-gen"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github" aria-hidden="true"></i>
                   </span>
-                  <span><s>Multi Agent TAMP Solver*</s></span>
+                  <span>Multi Agent TAMP Solver</span>
                   </a>
               </span>
               <span class="link-block">
@@ -98,7 +80,7 @@
                   <span class="icon">
                       <i class="fab fa-github" aria-hidden="true"></i>
                   </span>
-                  <span><s>Scene Generator*</s></span>
+                  <span>Scene Generator</span>
                   </a>
               </span>
               <!-- Policy Link. -->
@@ -108,7 +90,7 @@
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span><s>Policy Learning Code*</s></span>
+                  <span>Policy Learning Code</span>
                   </a>
                 </span>
               <!-- Dataset Link. -->
@@ -118,14 +100,10 @@
                   <span class="icon">
                       <i class="fas fa-database"></i>
                   </span>
-                  <span>Data**</span>
+                  <span>Data</span>
                   </a>
               </span>
             </div>
-
-            <div>*Code will be available after deanonymization.</div>
-            <div>**Currently ~10% of the dataset. Full dataset will be available after deanonymization.</div>
-
           </div> 
         </div>
       </div>
@@ -293,7 +271,7 @@
           </p>
 
           <p>
-            We train a transformer architecture to predict the makespan for a given sequence and scene.
+            We use a transformer-encoder as backbone for an MLP to predict the makespan for a given sequence and scene.
           </p>
         </div>
 
@@ -325,9 +303,10 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{authors,
-  author    = {Anonymous},
+  author    = {Zamora, Miguel and Hartmann, Valentin N. and Coros, Stelian},
   title     = {TAPAS: A Dataset for Task Assignment and Planning for Multi Agent Systems},
   year      = {2024},
+  journal   = {Workshop on Data Generation for Robotics at Robotics, Science and Systems '24}
 }</code></pre>
   </div>
 </section>
